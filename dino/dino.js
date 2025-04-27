@@ -44,7 +44,7 @@ const update = () => {
     dino.jumping = false;
   }
   
-  obstacleSpeed = 5 + Math.floor(score / 1000);
+  obstacleSpeed = 5 + Math.floor(score / 1000); // каждые 1000 очков скорость увеличивается
 
   obstacles.forEach(obs => {
     obs.x -= obstacleSpeed;
