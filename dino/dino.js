@@ -109,7 +109,7 @@ const startGame = () => {
 
 // Закрыть игру
 closeDino.addEventListener("click", () => {
-  window.location.href = "../index.html";
+  window.location.href = "../public/index.html"
 });
 
 // Начать игру
