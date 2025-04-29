@@ -2,7 +2,7 @@ let currentInput = "0";
 const display = document.querySelector(".display");
 const historyContent = document.getElementById("history-content");
 const buttons = document.querySelectorAll(".btn");
-const themeToggle = document.getElementById("themeToggle");
+const themeToggle = document.querySelector('#theme-toggle');
 const clearHistoryBtn = document.getElementById("clearHistory");
 const body = document.body;
 
