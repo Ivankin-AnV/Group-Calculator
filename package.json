@@ -1,14 +1,17 @@
 {
   "name": "group-calculator",
   "version": "1.0.0",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "node server.js"
   },
-    "jest": {
+  "jest": {
     "testEnvironment": "jsdom",
-    "modulePaths": ["<rootDir>/public"] 
+    "modulePaths": [
+      "<rootDir>/public"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,9 +25,12 @@
   "homepage": "https://github.com/Ivankin-AnV/Group-Calculator#readme",
   "description": "",
   "dependencies": {
-    "jest": "^29.7.0"
+    "express": "^5.1.0",
+    "jest": "^29.7.0",
+    "pg": "^8.15.6"
   },
   "devDependencies": {
+    "electron": "^36.1.0",
     "jest-environment-jsdom": "^29.7.0"
   }
 }
