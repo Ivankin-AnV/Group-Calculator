@@ -51,7 +51,7 @@ export function setupController() {
     currentInput = currentInput === "0" ? value : currentInput + value;
     updateDisplay();
     if (currentInput.includes("2-0-0-4")) {
-      window.location.href = "/dino/dino.html";
+      window.location.href = "/public/dino/dino.html";
     }
   }
 
