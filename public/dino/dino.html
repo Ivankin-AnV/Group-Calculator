@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Динозаврик</title>
+  <link rel="stylesheet" href="dino_style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="gameColumn" class="game-column">
+      <canvas id="gameCanvas" width="800" height="300"></canvas>
+    </div>
+
+    <div id="dinoModal" class="dino-modal">
+      <p>Секретная игра началась!</p>
+      <button id="startGameBtn">Начать игру</button>
+      <button id="closeDino">Закрыть игру</button>
+    </div>
+  </div>
+
+  <button id="themeToggleBtn" class="theme-toggle-btn">🌓</button>
+
+  <script src="dino.js"></script>
+</body>
+</html>
