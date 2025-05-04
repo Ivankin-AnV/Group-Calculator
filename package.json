@@ -2,10 +2,11 @@
   "name": "group-calculator",
   "version": "1.0.0",
   "type": "module",
-  "main": "server.js",
+  "main": "electron.cjs",
   "scripts": {
-    "test": "jest",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start-electron": "electron .",
+    "test": "jest"
   },
   "jest": {
     "testEnvironment": "jsdom",
