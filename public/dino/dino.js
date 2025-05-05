@@ -13,19 +13,24 @@ const closeDino = document.getElementById("closeDino");
 const startGameBtn = document.getElementById("startGameBtn");
 const themeToggleBtn = document.getElementById("themeToggleBtn");
 
-// Отрисовка динозаврика
+// Отрисовка динозаврика с изображением
 const drawDino = () => {
-  ctx.fillStyle = "lime";
-  ctx.fillRect(dino.x, dino.y, dino.width, dino.height);
+  ctx.drawImage(dinoImg, dino.x, dino.y, dino.width, dino.height);
 };
 
-// Отрисовка препятствий
+const dinoImg = new Image();
+dinoImg.src = "assets/Dino.png";
+
+// Отрисовка препятствий с изображением
 const drawObstacles = () => {
-  ctx.fillStyle = "tomato";
   obstacles.forEach(obs => {
-    ctx.fillRect(obs.x, obs.y, obs.width, obs.height);
+    ctx.drawImage(obstacleImg, obs.x, obs.y, obs.width, obs.height);
   });
 };
+
+const obstacleImg = new Image();
+obstacleImg.src = "assets/Cactus.png";
+
 
 // Основной игровой цикл
 const update = () => {
