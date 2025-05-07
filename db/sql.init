@@ -1,0 +1,27 @@
+DROP TABLE IF EXISTS calculation_history;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+	username VARCHAR(50) UNIQUE NOT NULL,
+	email VARCHAR(100) NOT NULL UNIQUE,
+	password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+	status VARCHAR(20) DEFAULT 'active'
+);
+CREATE TABLE calculation_history (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id),
+    expression_and_result TEXT NOT NULL,
+    calculation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+);
+
+INSERT INTO users(username, email, password_hash)
+VALUES
+('Svetlana', 'lana@mail.ru', '1234'),
+('Ivan', 'iv@mail.ru', 'abcdef');
+INSERT INTO calculation_history(user_id, expression_and_result)
+VALUES
+(1, '5+5=10'),
+(2, '6-7=-1'),
+(2, '6-8+11=9');
