@@ -9,10 +9,18 @@
     "test": "jest"
   },
   "jest": {
-    "testEnvironment": "jsdom",
-    "modulePaths": [
-      "<rootDir>/public"
-    ]
+    "testEnvironment": "node",
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -35,6 +43,9 @@
     "pg": "^8.15.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
+    "babel-jest": "^29.7.0",
     "electron": "^36.1.0",
     "jest-environment-jsdom": "^29.7.0"
   }
