@@ -9,7 +9,10 @@
     "test": "jest"
   },
   "jest": {
-    "testEnvironment": "node",
+    "testEnvironment": "jsdom",
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
     "moduleDirectories": [
       "node_modules",
       "src"
@@ -37,7 +40,6 @@
     "bcrypt": "^5.1.1",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "jest": "^29.7.0",
     "jsonwebtoken": "^9.0.2",
     "mathjs": "^14.4.0",
     "pg": "^8.15.6"
@@ -47,6 +49,8 @@
     "@babel/preset-env": "^7.27.2",
     "babel-jest": "^29.7.0",
     "electron": "^36.1.0",
-    "jest-environment-jsdom": "^29.7.0"
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^26.1.0"
   }
 }
