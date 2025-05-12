@@ -246,3 +246,75 @@ body {
 .error {
     color: var(--error-color);
 }
+
+/* форма регистрации */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: var(--panel-color);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  color: var(--text-color);
+  width: 300px;
+  max-width: 80%;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin-left: -10px;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--operation-color);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: var(--operation-hover);
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text-color);
+}
